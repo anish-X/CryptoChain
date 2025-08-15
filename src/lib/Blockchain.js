@@ -318,7 +318,7 @@ export class Blockchain {
     constructor() {
         this.chain = [];
         this.pendingTransaction = []; // keep your original name
-        this.difficulty = 3;
+        this.difficulty = 4;
         this.wallets = [];
 
         this.chain.push(this.createGenesisBlock());
@@ -401,6 +401,7 @@ export class Blockchain {
 
         this.chain.push(newBlock);
         this.pendingTransaction = [];
+        return newBlock;
     }
 
     //   createWallet(name, balance) {
